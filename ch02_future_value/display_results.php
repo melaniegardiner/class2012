@@ -51,8 +51,7 @@
 	//calculate the future value
 	$future_value = $investment;
 	
-	$investment = $future_value *(1.0 / pow(1.0 + $interest_rate, $number_of_years););
-	
+	$investment = $future_value *(1.0 / pow(1.0 + $interest_rate, $number_of_years));
    /*  // calculate the rate of investment
      $investment = $future_value;
     for ($i = 1; $i <= $investment; $i++) {
