@@ -1,7 +1,7 @@
 <?php
-require 'model/categories.php';//ties the model and view together
+require 'model/dogs.php';//ties the model and view together
 
-$products = get_products();
+$dogs = get_dogs();
 
 include 'views/list.php';
 ?>

@@ -1,14 +1,21 @@
 <html>
 <body>
-<h1>
-<?php
 
-foreach($products as $product){
-	echo $product['productName'];
-}
+ //this is the view file
 
-//echo "hello world";
-?>
-</h1>
+
+
+
+<ul>
+<?php foreach($dogs as $dog){ ?>
+	<li>
+		<?php echo $dog['name'], "<br />"; ?>
+		
+	</li>
+	<?php } ?>
+</ul>
+
+
+
 </body>
 </html>
