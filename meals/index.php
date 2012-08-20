@@ -16,4 +16,6 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
+include 'views/list.php';//link view file
+
 ?>
