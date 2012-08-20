@@ -1,4 +1,4 @@
-<html><body>Hullo world!</body></html>
+<html><body>Hullo world! I live in the index</body></html>
 
 <?php 
 
@@ -16,6 +16,23 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
-include 'views/list.php';//link view file
+if(array_key_exists('submit', $_POST))
+{
+	$oMeal = new Meal();
+	$oMeal->date = $_POST['date'];
+	$oMeal->member = $_POST['members'];
+	
+	$oPurchase->save();
+}
+
+if(array_key_exists('add', $_POST))
+{
+	include 'views/add.php';//link add file
+}
+else 
+{
+	include 'views/list.php';//link view file
+}
+
 
 ?>
