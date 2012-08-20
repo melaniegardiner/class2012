@@ -20,9 +20,9 @@ if(array_key_exists('submit', $_POST))
 {
 	$oMeal = new Meal();
 	$oMeal->date = $_POST['date'];
-	$oMeal->member = $_POST['members'];
+	$oMeal->members = $_POST['members'];
 	
-	$oPurchase->save();
+	$oMeal->save();
 }
 
 if(array_key_exists('add', $_POST))

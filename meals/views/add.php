@@ -2,7 +2,7 @@
 
 hullo world. I live in the add view
 
-<form action = '.' method = 'post' >
+<form action = '.' method = 'post'>
 
 		<p>
 			<label>Date:</label>
@@ -15,7 +15,7 @@ hullo world. I live in the add view
 	
 
 
-<input type = 'submit' name = 'add' value = 'add'>
+<input type = 'submit' name = 'submit' value = 'submit'>
 
 </form>
 

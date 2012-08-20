@@ -15,8 +15,8 @@
 		<?php foreach(Meal::find('all') as $oMeal){?>
 		
 		<tr>
-			<td><?php echo $oDate->date ?></td>
-			<td><?php echo $oMember->members ?></td>
+			<td><?php echo $oMeal->date ?></td>
+			<td><?php echo $oMeal->members ?></td>
 		</tr>
 		
 		<?php }?>
