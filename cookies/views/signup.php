@@ -6,7 +6,7 @@
 	<label>password</label><input type = 'password' name = 'password' />
 	<label>repeat password</label><input type = 'password' name = 'repeatpassword' />
 	
-	<input type = 'submit' value = 'signup' name = 'newuser' />
+	<input type = 'submit' value = 'save' name = 'action' />
 	
 </form>
 

@@ -7,8 +7,8 @@
 		<label>Name:</label> <input type="text" name ="username" /><br />
 		<label>Password:</label> <input type="password" name ="password" /><br />
 		
-		 <input type="submit" value="Save" /><br />
-		 <input type="submit" value="Sign up" name = "signup" /><br />
+		 <input type="submit" value="signin" name = "action" /><br />
+		 <input type="submit" value="signup" name = "action" /><br />
 	
 
 	</form>
