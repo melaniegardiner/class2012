@@ -15,7 +15,7 @@ if($action == 'Contact')
 	$headers = 	'From: ' . $_SERVER['SERVER_ADMIN'] . "\r\n" .
 				'Reply-To: ' . $_POST['email'] . "\r\n" .
 		//read receipt
-		//"Disposition-Notification-To: " . $_POST['email'] . "\r\n
+		//"Disposition-Notification-To: " . $_POST['email'] . "\r\n" . 
 				'X-Mailer: PHP/' . phpversion();
 	echo $headers;
 		

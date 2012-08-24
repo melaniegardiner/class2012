@@ -25,9 +25,22 @@ if($action == 'Subscribe')
 	$oEmail->email = $_POST['email'];
 	$oEmail->save();
 }
+//deleting email from db
+elseif($action == 'Delete')
+{
+	$oEmail = Email::find_by_email($_GET['email']);//class method find by email
+	if($oEmail && $oEmail->delete())
+	{
+		echo "1 email deleted";
+	}
+	else 
+	{
+		echo "0 emails deleted";	
+	}
+}
+	
 elseif($action == 'Unsubscribe')
 {
-	print_r($_GET);
 	$oEmail = Email::find_by_email($_GET['email']);//class method find by email
 	if($oEmail && $oEmail->delete())
 	{
@@ -39,15 +52,20 @@ elseif($action == 'Unsubscribe')
 	}
 	exit();
 }
+elseif($action == 'Send')
+{
+	include 'model/helpers.php';
+	sendEmails();
+}
 
 //test the $action
-if($action == 'Edit List')
+if($action == '' || $action == 'Send')
 {
-	include 'views/edit.php';
+	include 'views/email.php';
 }
 else 
 {
-	include 'views/email.php';
+	include 'views/edit.php';
 
 }
 
