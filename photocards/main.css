@@ -1,0 +1,111 @@
+/*
+	Author: Melanie Gardiner
+	Created on: Aug 27, 2012
+	Revised on: Aug 30, 2012
+	CSS Version: 2.1
+	
+	Purpose: Stylise photography site
+	
+	Related Files:
+*/
+
+/* Clear default styling from block level elements */
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form,
+fieldset, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    background-color: rgb(0,0,0);
+}
+
+/*set width; center container within page wrap; */
+#container {
+	width: 960px;
+	margin: 0 auto;
+	background-color: rgb(140, 134, 129);
+}
+
+
+#main {
+	 margin: 40px 0 0 40px;
+}
+	#header {
+		height: 40px;
+	}
+	#sidebar {
+		width: 425px;
+		margin: 0;
+		padding: 0;
+		float: left;
+	}
+	
+		h1 {
+		    color: black;
+		    padding-bottom: 20px;
+		    font-size: 200%;
+		}
+		h2 {
+			font-size: 150%;
+		}
+		#sidebar p {
+			margin: 10px 0;
+			font-size: 80%;
+		}
+	
+	#catalogue {
+	    margin-left: 425px;
+	    background: black;
+	}
+	
+		#catalogue #article {
+			float: left;
+			margin: 20px 20px 0 0;
+			
+		}
+		
+		#catalogue p {
+			font-size: 70%;
+			padding-bottom: 5px;
+		}
+		
+		/*FOOTER*/
+	/*clear left after floated neighbour; assign width/height; add spacing; rule line*/
+	#footer {
+		clear: left;
+		width: 885px;
+		height: 40px;
+		border-top: 1px solid #000;
+		padding: 20px 0;
+	}
+	
+		/*put copywright on left by floating(div is a block element); assign width to wrap text; adjust font size; assign colour*/
+		#footer #copyright {
+			float: left;
+			width: 660px;
+			font-size: 75%;
+			color: white;
+		}
+		
+		/*clear right after floating neighbour; add margin to push all the way to the right; remove bullets*/
+		#footer #social ul {
+			clear: right;
+			margin-left: 740px;
+			list-style: none;
+		}
+		
+		#footer #social li {
+			float: left;
+			display: block;
+			margin-left: 15px;
+		}
+				
+
+.image {
+	 margin: 0 auto;
+}
