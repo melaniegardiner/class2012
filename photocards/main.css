@@ -58,6 +58,11 @@ body {
 			font-size: 80%;
 		}
 	
+	label {
+		width: 80px;
+		float: left;
+	}
+	
 	#catalogue {
 	    margin-left: 425px;
 	    background: black;

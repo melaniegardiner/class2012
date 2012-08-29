@@ -21,6 +21,20 @@
 					<p>Photocards are printed in full colour on thick card stock. Blank
 						inside. Envelope included.</p>
 					<p>$4 each</p>
+					
+					<!-- contact form -->
+					<form action = '.' method = 'post'>
+						<fieldset><h3>Contact me:</h3></fieldset>
+						<p><label>Your email:</label><input type = "text" name = "email" /></p>
+						<p><label>Subject:</label><input type = "text" name = "subject" /></p>
+						<p><label>Message:</label></p>
+						<textarea cols="20" rows="10" name = "message"></textarea>
+						
+						<div>
+							<input type = "submit" name = 'action' value = "Send" />
+						</div>
+					
+					</form>
 				</div>
 
 
