@@ -16,36 +16,41 @@
 				<div id="header"></div>
 				<div id="sidebar">
 					<h1>Melanie Gardiner</h1>
-					<h2>Photography by Melanie Gardiner</h2>
-					<h3>Catalogue</h3>
-					<p>Photocards are printed in full colour on thick card stock. Blank
-						inside. Envelope included.</p>
-					<p>$4 each</p>
+					<h2>Photography</h2>
+					<h3>Greeting card catalogue</h3>
+					
+					<p>Photocards are printed in full colour on thick card stock.</p> 
+					<p>Blank inside. </p>
+					<p>Envelope included.</p>
 					
 					<!-- contact form -->
 					<form action = '.' method = 'post'>
-						<fieldset><h3>Contact me:</h3></fieldset>
-						<p><label>Your email:</label><input type = "text" name = "email" /></p>
-						<p><label>Subject:</label><input type = "text" name = "subject" /></p>
-						<p><label>Message:</label></p>
-						<textarea cols="20" rows="10" name = "message"></textarea>
+						<fieldset>
 						
-						<div>
-							<input type = "submit" name = 'action' value = "Send" />
-						</div>
+							<legend>Contact me:</legend>
+							<p><label for="email">Your email:</label><input id="email" type = "text" name = "email" /></p>
+							<p><label for="subject">Subject:</label><input id="subject" type = "text" name = "subject" /></p>
+							<p><label for="message">Message:</label></p>
+							<textarea cols="35" rows="10" id="message" name = "message"></textarea>
+							
+							<div id="button">
+								<input type = "submit" name = 'action' value = "Send"  />
+							</div>
 					
+					</fieldset>
 					</form>
 				</div>
 
-
+				<!-- start catalogue -->
+				
 				<div id="catalogue">
 
 					<?php foreach(Photocard::find('all') as $oPhotocard){?>
 
-						<div id="article">
+						<div class="article">
 							
 								<p class="image"><a href="."></a>
-								<img src='images/<?php echo $oPhotocard->filename ?>' /></p>
+								<img src='images/<?php echo $oPhotocard->filename ?>' width="140" height="175" alt="<?php echo $oPhotocard->title ?>"/></p>
 								<p><?php echo $oPhotocard->title ?></p>
 								<p><?php echo $oPhotocard->description ?></p>
 			

@@ -39,6 +39,9 @@ ActiveRecord\Config::initialize(function($cfg)
 		if(mail('melaniegardiner13@gmail.com', $subject, $message, $headers))
 		{
 			echo "mail sent";
+			$oEmail = new Email;
+			$oEmail->email = $_POST['email'];
+			$oEmail->save();
 		}
 		else {
 			echo "mail failed";
