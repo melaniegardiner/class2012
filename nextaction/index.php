@@ -47,9 +47,14 @@ ActiveRecord\Config::initialize(function($cfg)
 	
 	if(array_key_exists('submit', $_POST))
 	{
-		$oNextaction = new Nextaction();
+		$oNextaction = new Nextaction();//this should be renamed Jobs -> needs rework in the database
+		
 		$oNextaction->dateposted = $_POST['dateposted'];
 		$oNextaction->title = $_POST['title'];
+		$oNextaction->description = $_POST['description'];
+		$oNextaction->link = $_POST['link'];
+		$oNextaction->postedby = $_POST['postedby'];
+		$oNextaction->nextaction = $_POST['nextaction'];
 	
 		$oNextaction->save();
 	}
