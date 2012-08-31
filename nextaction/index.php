@@ -53,8 +53,12 @@ ActiveRecord\Config::initialize(function($cfg)
 	//****************
 	
 	if($action == 'Refresh')//if user clicks on refresh button
+	//need to add statements for if the date doesn't match today's date
 	{
 		$oNextAction = new NextAction;
+		
+		global $oNextAction//this object needs to be available to list.php
+		 
 		$oNextAction->title = $_POST['title'];
 		$oNextAction->save();
 		
@@ -68,9 +72,7 @@ ActiveRecord\Config::initialize(function($cfg)
 	
 		$oNextaction->save();
 	}
-	
-	
-	
+		
 	
 		include 'views/list.php';//link to list file
 		
