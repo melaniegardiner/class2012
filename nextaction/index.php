@@ -4,6 +4,11 @@
 //*******************
 require '../ActiveRecord/ActiveRecord.php';
 
+$action = (array_key_exists('action', $_POST)?$_POST['action']: '');
+
+$action = (array_key_exists('action', $_GET)?$_GET['action']: $action);//$action has already been set
+
+
 ActiveRecord\Config::initialize(function($cfg)
 {
 	$cfg->set_model_directory('model');
@@ -16,6 +21,13 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
+
+if($action == 'Refresh')
+{
+	$oEmail = new Email;
+	$oEmail->email = $_POST['email'];
+	$oEmail->save();
+}
 //********************
 //scrape data from website
 //***************************
@@ -23,7 +35,7 @@ ActiveRecord\Config::initialize(function($cfg)
 	header("Content-Type: text/plain");
 	
 	//wowjobs
-	//$sIn = array();//create array called $sIn
+	//comes in as a string
 	$sIn = file_get_contents("http://www.wowjobs.ca/wowrss.aspx?q=Web+Developer&l=N2T1G8&s=&sr=25&t=30&f=r&e=&si=A&Dup=H");
 		
 	echo $sIn; // print out all contents scraped from wow
@@ -51,11 +63,12 @@ ActiveRecord\Config::initialize(function($cfg)
 	{
 		$oNextaction = new Nextaction();//this should be renamed Jobs -> needs rework in the database
 		
-		$oNextaction->dateposted = $_POST['dateposted'];
-		$oNextaction->title = $_POST['title'];
+		//each object has these attributes:
+		$oNextaction->pubdate = $_POST['pubdate'];
+		$oNextaction->sTitle = $_POST['sTitle'];
 		$oNextaction->description = $_POST['description'];
 		$oNextaction->link = $_POST['link'];
-		$oNextaction->postedby = $_POST['postedby'];
+		$oNextaction->author = $_POST['author'];
 		$oNextaction->nextaction = $_POST['nextaction'];
 	
 		$oNextaction->save();
