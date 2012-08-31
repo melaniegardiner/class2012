@@ -23,7 +23,7 @@ ActiveRecord\Config::initialize(function($cfg)
 	header("Content-Type: text/plain");
 	
 	//wowjobs
-	$sIn = file_get_contents("http://www.wowjobs.ca/wowrss.aspx?q=Web+Developer&1=N2T1G8&s=sr=25&t=30&f=r&e=si=A&Dup=H");
+	$sIn = file_get_contents("http://www.wowjobs.ca/wowrss.aspx?q=Web+Developer&l=N2T1G8&s=&sr=25&t=30&f=r&e=&si=A&Dup=H");
 		
 	echo $sIn;
 	//exit();
@@ -54,16 +54,9 @@ ActiveRecord\Config::initialize(function($cfg)
 		$oNextaction->save();
 	}
 	
-	if(array_key_exists('add', $_POST))
-	{
-		include 'views/add.php';//link add file
-	}
-	else
-	{
-		include 'views/list.php';//link view file
-	}
+	
+		include 'views/list.php';//link to list file
+	
 	
 
 ?>
-
-<html><body>hullo worldz!</body></html>
