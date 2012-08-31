@@ -21,13 +21,6 @@ ActiveRecord\Config::initialize(function($cfg)
 	);
 });
 
-
-if($action == 'Refresh')
-{
-	$oEmail = new Email;
-	$oEmail->email = $_POST['email'];
-	$oEmail->save();
-}
 //********************
 //scrape data from website
 //***************************
@@ -59,13 +52,15 @@ if($action == 'Refresh')
 	//create new object
 	//****************
 	
-	if(array_key_exists('$sIn', $_POST))// this needs to be chgd
+	if($action == 'Refresh')//if user clicks on refresh button
 	{
-		$oNextaction = new Nextaction();//this should be renamed Jobs -> needs rework in the database
+		$oNextAction = new NextAction;
+		$oNextAction->title = $_POST['title'];
+		$oNextAction->save();
 		
 		//each object has these attributes:
 		$oNextaction->pubdate = $_POST['pubdate'];
-		$oNextaction->sTitle = $_POST['sTitle'];
+		$oNextaction->title = $_POST['title'];
 		$oNextaction->description = $_POST['description'];
 		$oNextaction->link = $_POST['link'];
 		$oNextaction->author = $_POST['author'];
@@ -75,8 +70,13 @@ if($action == 'Refresh')
 	}
 	
 	
-		include 'views/list.php';//link to list file
 	
+	
+		include 'views/list.php';//link to list file
+		
+		//need an if statement for when user click on one of the listings:
+		include 'views/detail.php';//link to detail file
+			
 	
 
 ?>

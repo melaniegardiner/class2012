@@ -1,37 +1,34 @@
 <html>
 <body>
 
-
 <form action='.' method="post">
-
-<?php
-foreach(Nextaction::find('all') as $sNextaction)
-{?>
-
-<p>
-	<?php echo $sNextaction->title; ?>
-
-</p>
-
-<?php }?>
+		
+	<table>
+		<tr>
+			<th>Date Posted</th>
+			<th>Title</th>
+			<th>Link</th>
+			<th>Next Action</th>
+		</tr>
+		
+		<tr>
+			<td>
+				<?php
+					foreach(Nextaction::find('all') as $oNextaction)
+				{?>
+			</td>
+			
+			<td><?php echo $oNextaction->pubdate?> </td>
+			<td><?php echo $oNextaction->title?> </td>
+			<td><?php echo $oNextaction->link?> </td>
+			
+			<td><input type="text" name="nextaction" /> </td>
+			
+		</tr>
 	
-
-<input type="text" name="nextaction" />
-<input type="submit" name="action" value="Refresh" />
+	</table>
+	
+	<input type="submit" name="action" value="Refresh" />
 
 </form>
-
-<table>
-	<tr>
-		<th>Date Posted</th>
-		<th>Title</th>
-		<th>Link</th>
-		<th>Next Action</th>
-	</tr>
-	
-	<tr>
-		
-	</tr>
-
-</table>
 </body></html>

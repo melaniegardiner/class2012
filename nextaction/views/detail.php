@@ -1,0 +1,1 @@
+<html><body>this is detail page</body></html>
