@@ -1,6 +1,6 @@
 <?php
 //*******************
-//connect to database
+//connect to database via ActiveRecord
 //*******************
 require '../ActiveRecord/ActiveRecord.php';
 
@@ -23,9 +23,10 @@ ActiveRecord\Config::initialize(function($cfg)
 	header("Content-Type: text/plain");
 	
 	//wowjobs
+	//$sIn = array();//create array called $sIn
 	$sIn = file_get_contents("http://www.wowjobs.ca/wowrss.aspx?q=Web+Developer&l=N2T1G8&s=&sr=25&t=30&f=r&e=&si=A&Dup=H");
 		
-	echo $sIn;
+	echo $sIn; // print out all contents scraped from wow
 	//exit();
 	
 	if(preg_match_all("|<title(.*)</title>|U", $sIn, $aIn))
@@ -34,6 +35,7 @@ ActiveRecord\Config::initialize(function($cfg)
 		foreach($aIn[0] as $sTitle)
 		{
 			echo $sTitle ."\n";
+			
 		}//end foreach
 	}//end if
 	else 
@@ -45,7 +47,7 @@ ActiveRecord\Config::initialize(function($cfg)
 	//create new object
 	//****************
 	
-	if(array_key_exists('submit', $_POST))
+	if(array_key_exists('$sIn', $_POST))// this needs to be chgd
 	{
 		$oNextaction = new Nextaction();//this should be renamed Jobs -> needs rework in the database
 		
