@@ -18,57 +18,87 @@
 					<h1>Melanie Gardiner</h1>
 					<h2>Photography</h2>
 					<h3>Greeting card catalogue</h3>
-					
-					<p>Photocards are printed in full colour on thick card stock.</p> 
-					<p>Blank inside. </p>
+
+					<p>Photocards are printed in full colour on thick card stock.</p>
+					<p>Blank inside.</p>
 					<p>Envelope included.</p>
-					
+
 					<!-- contact form -->
-					<form action = '.' method = 'post'>
+					<form action='.' method='post'>
 						<fieldset>
-						
+
 							<legend>Contact me:</legend>
-							<p><label for="email">Your email:</label><input id="email" type = "text" name = "email" /></p>
-							<p><label for="subject">Subject:</label><input id="subject" type = "text" name = "subject" /></p>
-							<p><label for="message">Message:</label></p>
-							<textarea cols="35" rows="10" id="message" name = "message"></textarea>
-							
+							<p>
+								<label for="email">Your email:</label><input id="email"
+									type="text" name="email" />
+							</p>
+							<p>
+								<label for="subject">Subject:</label><input id="subject"
+									type="text" name="subject" />
+							</p>
+							<p>
+								<label for="message">Message:</label>
+							</p>
+							<textarea cols="35" rows="10" id="message" name="message"></textarea>
+
 							<div id="button">
-								<input type = "submit" name = 'action' value = "Send"  />
+								<input type="submit" name='action' value="Send" />
 							</div>
-					
-					</fieldset>
+
+						</fieldset>
 					</form>
 				</div>
 
 				<!-- start catalogue -->
-				
+
 				<div id="catalogue">
 
-					<?php foreach(Photocard::find('all') as $oPhotocard){?>
+					<?php 
+					$result = $db->Execute("SELECT * FROM photocards");
+					if ($result === false) die("failed");
+					while (!$result->EOF)
+					{
 
-						<div class="article">
-							
-								<p class="image"><a href="."></a>
-								<img src='images/<?php echo $oPhotocard->filename ?>' width="140" height="175" alt="<?php echo $oPhotocard->title ?>"/></p>
-								<p><?php echo $oPhotocard->title ?></p>
-								<p><?php echo $oPhotocard->description ?></p>
-			
-						</div>
-					
-					<?php } ?>
-					
-				</div><!-- end  catalogue -->
-				
-					<?php include 'views/footer.php'?>
-				
-			</div><!-- end  main -->
-			
+						//foreach(Photocard::find('all') as $oPhotocard){
+						?>
 
-		</div>		<!-- end container -->
+					<div class="article">
 
-	</div><!-- end pagewrap -->
-	
+						<p class="image">
+							<a href="."></a> <img
+								src='images/<?php print $result->fields['fileName']; ?>'
+								width="140" height="175"
+								alt="<?php print $result->fields['title']; ?>" />
+						</p>
+						<p>
+							<?php print $result->fields['title'];?>
+						</p>
+						<p>
+							<?php 
+							print $result->fields['description'];
+							?>
+						</p>
+
+					</div>
+
+					<?php $result->MoveNext(); 
+				} ?>
+
+				</div>
+				<!-- end  catalogue -->
+
+				<?php include 'views/footer.php'?>
+
+			</div>
+			<!-- end  main -->
+
+
+		</div>
+		<!-- end container -->
+
+	</div>
+	<!-- end pagewrap -->
+
 
 
 
