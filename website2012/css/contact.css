@@ -1,0 +1,159 @@
+/*
+	Author:	Melanie Gardiner
+	Created on:	2012-03-04
+	Revised on:	2012-03-21
+	CSS Version: 2.1
+	
+	Purpose: To stylize portfolio website/contact page
+	
+	Related Files:
+	index.html
+	jquery.lightbox-0.5.js
+	jquery.js
+	contact.js
+	contact.html
+*/
+
+/* Clear default styling from block level elements */
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form,
+fieldset, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*assign font to website*/
+#page_wrap {
+	font-family: Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+}
+
+/*center container within page wrap*/
+#container {
+	width: 960px;
+	margin: 0 auto;
+}	
+
+/*HEADER*/	
+/*fill header bar with colour; all children float so give height; colour fills padding; space on bottom to push h2 down*/
+#header {
+	height: 125px;
+	background: #000;
+	padding: 40px 40px 20px 80px;
+	margin-bottom: 40px;
+	}
+
+	/*float h1; swap out h1 with logo image; push h1 text off the page; space within header bar*/
+	#header h1 {
+		float: left;
+		background: url("../images/logo.png") no-repeat;
+		width: 433px;
+		height: 124px;
+		font-size: 200%;
+		text-indent: -9999px;
+	}
+	
+		/*align navbar ul; move to right side; push down from top; e*/
+		#header #navbar ul {
+			margin-left: 630px;
+			margin-top: 40px;
+			color: #FFF;
+		}
+			
+			/*put ul li items side by side; space in between; change font size; remove bullet*/
+			#header #navbar ul li {
+				float: left;
+				list-style: none;
+				margin-left: 20px;
+				font-size: 90%;
+			}
+				/*style link/visited*/
+				#header #navbar ul li a:link, #header #navbar ul li a:visited {
+					text-decoration: none;
+					color: white;
+				}	
+				
+				/*colour hover/focus*/
+				#header #navbar ul li a:hover, #header #navbar ul li a:focus {
+					color: #A2A2A2;
+				}
+								
+	/*MAIN*/
+	/*center main on page; add left/right spacing */
+	#main {
+		padding: 0 10px;
+		margin: 0 auto;
+	}
+	
+		#main legend {
+			padding-bottom: 20px;
+			font-size: 200%;
+		}
+		
+		/*change labels from inline elements to in-line block so that they can take a width; thus lining up the beggining of all the text field boxes*/
+		#main form fieldset label {
+			display: inline-block;
+			width: 150px;
+			font-size: 80%;
+			margin-bottom: 10px;
+		}
+		
+		#main form fieldset input[type="text"] {
+			width: 300px;
+		}
+		
+		#main form fieldset, #main form #message  {
+			margin-bottom: 20px;
+		}
+		
+		/*chg to inline block so that it lines up with other text fields*/
+		#main fieldset textarea {
+			display: inline-block;
+			width: 300px;
+			resize: none;
+		}
+				
+	/*FOOTER*/
+	/*clear left after floated neighbour; assign width/height; add spacing; rule line*/
+	#footer {
+		clear: left;
+		width: 920px;
+		height: 40px;
+		margin-left: 10px;
+		border-top: 1px solid #000;
+		padding: 20px 0;
+	}
+	
+		/*put copywright on left by floating(div is a block element); assign width to wrap text; adjust font size; assign colour*/
+		#footer #copyright {
+			float: left;
+			width: 660px;
+			font-size: 75%;
+			color: #A2A2A2;
+		}
+		
+		/*clear right after floating neighbour; add margin to push all the way to the right; remove bullets*/
+		#footer #social ul {
+			clear: right;
+			margin-left: 790px;
+			list-style: none;
+		}
+		
+		#footer #social li {
+			float: left;
+			display: block;
+			margin-left: 10px;
+		}
+		
+
+
+/*class used for colouring the text field elements after checks are made for any user-entered content, or RegEx content*/
+#main .error {
+		border-color: #F00;
+		background-color: #A9DBF6;
+		color: #F00;
+}	
+
+#main .sm {
+	color: #CB4F29;
+	font-size: 90%;
+}	
