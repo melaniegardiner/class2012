@@ -7,15 +7,14 @@ if($action == 'landing' || $action == '')
 {
 	include 'views/landing.php';
 }
-else if ($action == "contact")
+elseif ($action == "contact")
 {
 	include 'views/contact.php';
 }
 
-else if ($action == "store")
+elseif ($action == "store")
 {
 	include 'views/store.php';
 }
-
 
 ?>

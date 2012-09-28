@@ -2,24 +2,21 @@
 <body>
 
 	<div id="page_wrap">
+		<?php include 'head.php'; ?>
+
 		<div id="container">
 
 			<div id="main">
-				<div id="header"></div>
-				<div id="sidebar">
-					<h1>Melanie Gardiner</h1>
+				<div id="left-list">
 					<h2>Photography</h2>
 					<h3>Greeting card catalogue</h3>
-
+	
 					<p>Photocards are printed in full colour on thick card stock.</p>
 					<p>Blank inside.</p>
 					<p>Envelope included.</p>
-
-
 				</div>
-
+				
 				<!-- start catalogue -->
-
 				<div id="catalogue">
 
 					<?php 
@@ -27,48 +24,42 @@
 					if ($result === false) die("failed");
 					while (!$result->EOF)
 					{
-
 						//foreach(Photocard::find('all') as $oPhotocard){
 						?>
 
-					<div class="article">
+						<div class="article">
 
-						<p class="image">
-							<a href="."></a> <img
-								src='images/<?php print $result->fields['fileName']; ?>'
-								width="140" height="175"
-								alt="<?php print $result->fields['title']; ?>" />
-						</p>
-						<p>
-							<?php print $result->fields['title'];?>
-						</p>
-						<p>
-							<?php 
-							print $result->fields['description'];
-							?>
-						</p>
+							<p class="image">
+								<a href="."></a> <img
+									src='images/<?php print $result->fields['fileName']; ?>'
+									width="140" height="175"
+									alt="<?php print $result->fields['title']; ?>" />
+							</p>
+							<p>
+								<?php print $result->fields['title'];?>
+							</p>
+							<p>
+								<?php 
+								print $result->fields['description'];
+								?>
+							</p>
 
-					</div>
+						</div>
 
-					<?php $result->MoveNext(); 
-				} ?>
+						<?php $result->MoveNext(); 
+					} ?>
 
-				</div>
-				<!-- end  catalogue -->
-				<div id="footer" role="contentinfo">
-					<?php include 'footer.php'?>
-				</div>
-				<!-- footer -->
+				</div><!-- end  catalogue -->
+				
+			</div><!-- end  main -->
 
-			</div>
-			<!-- end  main -->
+			<div id="footer" role="contentinfo">
+				<?php include 'footer.php';?>
+			</div><!-- end footer -->
 
+		</div><!-- end container -->
 
-		</div>
-		<!-- end container -->
-
-	</div>
-	<!-- end pagewrap -->
+	</div><!-- end pagewrap -->
 
 </body>
 </html>

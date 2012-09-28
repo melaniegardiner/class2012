@@ -27,7 +27,7 @@ ADOdb_Active_Record::SetDatabaseAdapter($db);
 class email extends ADOdb_Active_Record{}
 class photocard extends ADOdb_Active_Record{}
 
-include 'views/list.php';
+include 'list.php';
 
 $action = array_key_exists('action', $_POST)?$_POST['action']: '';
 

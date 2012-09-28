@@ -62,7 +62,7 @@ fieldset, blockquote {
 			#header #navbar ul li {
 				float: left;
 				list-style: none;
-				margin-left: 20px;
+				margin-left: 18px;
 				font-size: 90%;
 			}
 				/*style link/visited*/
@@ -110,6 +110,33 @@ fieldset, blockquote {
 			width: 670px;
 			font-size: 120%;
 		}
+		#catalogue {
+	    margin-left: 425px;
+	    background: black;
+	}
+	
+		.article {
+			float: left;
+			margin: 20px 20px 0 0;
+			
+		}
+		
+		#catalogue p {
+			font-size: 70%;
+			padding-bottom: 5px;
+		}
+		
+	/*FORM*/
+	label {
+		width: 80px;
+		float: left;
+	}
+	
+	legend {
+		font-size: 100%;
+		padding: 20px 0 0 0;
+		font-weight: bold;
+	}
 	
 	/*FOOTER*/
 	/*clear left after floated neighbour; assign width/height; add spacing; rule line*/
@@ -142,4 +169,12 @@ fieldset, blockquote {
 			display: block;
 			margin-left: 10px;
 		}
+		
+	
+	
+	/*remove stroke for other browser*/
+		
+	.image {
+		 margin: 0 auto;
+	}
 			

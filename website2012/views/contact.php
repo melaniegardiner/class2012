@@ -1,34 +1,43 @@
+<html>
+<body>
 
-<?php include 'head.php'?>
-<div = "main">
-	<form action='.' method='post'>
+	<div id="page_wrap">
+	<?php include 'head.php'; ?>
 
-		<fieldset>
+		<div id="container">
 
-			<legend>Contact me:</legend>
-			<p>
-				<label for="email">Your email:</label><input id="email" type="text"
-					name="email" />
-			</p>
-			<p>
-				<label for="subject">Subject:</label><input id="subject" type="text"
-					name="subject" />
-			</p>
-			<p>
-				<label for="message">Message:</label>
-			</p>
-			<textarea cols="35" rows="10" id="message" name="message"></textarea>
+			<div id="main">
+				<form action='.' method='post' onsubmit='return validateForm()'>
 
-			<div id="button">
-				<input type="submit" name='action' value="Send" />
-			</div>
+					<fieldset>
 
-		</fieldset>
-	</form>
-</div>
-<!-- main -->
+						<legend>Contact me:</legend>
+						<p>
+							<label for="email">Your email:</label><input id="email"
+								type="text" name="email" />
+						</p>
+						<p>
+							<label for="subject">Subject:</label><input id="subject"
+								type="text" name="subject" />
+						</p>
+						<p>
+							<label for="message">Message:</label>
+						</p>
+						<textarea cols="35" rows="10" id="message" name="message"></textarea>
 
-<div id="footer" role="contentinfo">
-	<?php include 'footer.php'?>
-</div>
-<!-- footer -->
+						<div id="button">
+							<input type="submit" name='action' value="Send" />
+						</div>
+
+					</fieldset>
+				</form>
+			</div><!-- main -->
+			<div id="footer" role="contentinfo">
+					<?php include 'footer.php';?>
+			</div><!-- footer -->
+		</div><!-- container -->
+	</div><!-- page wrap -->
+</body>
+</html>
+
+

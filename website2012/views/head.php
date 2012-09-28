@@ -41,21 +41,22 @@ External files:
 		var $jq = jQuery.noConflict();
 		$jq(function() {
 			$jq('#main ul li a').lightBox();
+			$jq('#article p a').lightBox();
+			
 		});
 	</script>
 
 <!--CSS link-->
 <link rel="stylesheet" type="text/css" href="./css/main.css" />
-<link rel="stylesheet" type="text/css"
-	href="./css/jquery.lightbox-0.5.css" />
+<link rel="stylesheet" type="text/css" href="./css/jquery.lightbox-0.5.css" />
 
 <title>Melanie Gardiner</title>
 
 </head>
+
 <body>
 	<div id="page_wrap">
 		<div id="container">
-
 
 			<div id="header" role="navigation">
 				<div id="logo">
