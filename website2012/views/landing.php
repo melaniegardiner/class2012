@@ -11,11 +11,18 @@
 					Welcome to the portfolio of Melanie Gardiner. <span>Designer and
 						Web Developer.</span>
 				</h2>
-				<ul>
-					<li><a href="./images/sample1_big.png" title="Sealmax ads"> <img
-							src="./images/sample1_300x180.jpg" width="300" height="180"
+				
+				<p>Thanks for visiting my website. I've been a graphic designer for
+					over 10 years, working in agencies and corporate marketing
+					departments developing marketing communication materials. I design
+					and coordinate my projects from start to finish. I have a diploma
+					in graphic design and a certificate in web design and development.</p>
+					<ul>
+					<li>
+						<a href="./images/sample1_big.png" title="Sealmax ads"> 
+							<img src="./images/sample1_300x180.jpg" width="300" height="180"
 							alt="Sealmax ads" title="Sealmax ads" />
-					</a>
+						</a>
 					</li>
 					<li><a href="./images/sample2_big.jpg" title="2012 Calendar"> <img
 							src="./images/sample2_300x180.jpg" width="300" height="180"
@@ -50,11 +57,6 @@
 					</li>
 
 				</ul>
-				<p>Thanks for visiting my website. I've been a graphic designer for
-					over 10 years, working in agencies and corporate marketing
-					departments developing marketing communication materials. I design
-					and coordinate my projects from start to finish. I have a diploma
-					in graphic design and a certificate in web design and development.</p>
 			</div><!-- end main -->
 			
 			<div id="footer" role="contentinfo">

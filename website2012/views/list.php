@@ -7,15 +7,9 @@
 		<div id="container">
 
 			<div id="main">
-				<div id="left-list">
-					<h2>Photography</h2>
-					<h3>Greeting card catalogue</h3>
-	
-					<p>Photocards are printed in full colour on thick card stock.</p>
-					<p>Blank inside.</p>
-					<p>Envelope included.</p>
-				</div>
-				
+				<h2>Greeting card catalogue</h2>
+				<p>Photocards are printed in full colour on thick card stock. Blank inside. Envelope included.</p>
+			
 				<!-- start catalogue -->
 				<div id="catalogue">
 
@@ -28,13 +22,15 @@
 						?>
 
 						<div class="article">
-
-							<p class="image">
-								<a href="."></a> <img
-									src='images/<?php print $result->fields['fileName']; ?>'
-									width="140" height="175"
-									alt="<?php print $result->fields['title']; ?>" />
-							</p>
+						<ul>
+							<li class="image">
+								<a href=".">
+									<img src='images/<?php print $result->fields['fileName']; ?>'
+											width="140" height="175"
+											alt="<?php print $result->fields['title']; ?>" />
+								</a>
+							</li>
+						</ul>
 							<p>
 								<?php print $result->fields['title'];?>
 							</p>

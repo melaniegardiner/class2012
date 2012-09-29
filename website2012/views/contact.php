@@ -7,17 +7,25 @@
 		<div id="container">
 
 			<div id="main">
+			<h2>I'd love to hear from you!</h2>
+			<p>Please feel free to contact me through LinkedIn or fill this form out. It will email me and I will contact you. </p>
 				<form action='.' method='post' onsubmit='return validateForm()'>
 
 					<fieldset>
 
 						<legend>Contact me:</legend>
 						<p>
-							<label for="email">Your email:</label><input id="email"
+							<label for="email">Your email:</label>
+						</p>
+						<p>	
+							<input id="email"
 								type="text" name="email" />
 						</p>
 						<p>
-							<label for="subject">Subject:</label><input id="subject"
+							<label for="subject">Subject:</label>
+						</p>
+						<p>	
+							<input id="subject"
 								type="text" name="subject" />
 						</p>
 						<p>
