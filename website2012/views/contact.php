@@ -9,13 +9,13 @@
 			<div id="main">
 			<h2>I'd love to hear from you!</h2>
 			<p>Please feel free to contact me through LinkedIn or fill this form out. It will email me and I will contact you. </p>
-				<form action='.' method='post' onsubmit='return validateForm()'>
+				<form action='.' method='post'>
 
 					<fieldset>
 
 						<legend>Contact me:</legend>
 						<p>
-							<label for="email">Your email:</label>
+							<label for="email">Your email address:</label>
 						</p>
 						<p>	
 							<input id="email"
@@ -35,11 +35,16 @@
 
 						<div id="button">
 							<input type="submit" name='action' value="Send" />
+							
 						</div>
 
 					</fieldset>
 				</form>
+				
+				
+				
 			</div><!-- main -->
+			
 			<div id="footer" role="contentinfo">
 					<?php include 'footer.php';?>
 			</div><!-- footer -->

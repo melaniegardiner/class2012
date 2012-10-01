@@ -1,7 +1,7 @@
 /*
 	Author:	Melanie Gardiner
 	Created on:	2012-03-04
-	Revised on:	2012-03-21
+	Revised on:	2012-10/1
 	CSS Version: 2.1
 	
 	Purpose: To stylize portfolio website
@@ -79,7 +79,7 @@ fieldset, blockquote {
 	/*MAIN*/
 	/*center main on page; add left/right spacing */
 	#main {
-		padding: 0 10px;
+		padding: 0 10px 10px 10px;
 		margin: 0 auto;
 	}
 	
@@ -97,7 +97,7 @@ fieldset, blockquote {
 		#main ul li {
 			display: block;
 			float: left;
-			padding: 10px 10px 0 0;
+			padding: 10px 10px 10px 0;
 			width: 300px;
 			height: 180px;
 		}
@@ -105,7 +105,7 @@ fieldset, blockquote {
 		/*p is a block element; clear left; add padding; assign width*/
 		#main p {
 			clear: left;
-			padding-bottom: 15px 0;
+			padding-bottom: 15px;
 			width: 670px;
 			font-size: 120%;
 		}
@@ -128,7 +128,7 @@ fieldset, blockquote {
 	
 	legend {
 		font-size: 100%;
-		padding: 20px 0 0 0;
+		padding: 20px 0;
 		font-weight: bold;
 	}
 	

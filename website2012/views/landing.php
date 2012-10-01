@@ -17,6 +17,7 @@
 					departments developing marketing communication materials. I design
 					and coordinate my projects from start to finish. I have a diploma
 					in graphic design and a certificate in web design and development.</p>
+				<p>Currently, I am available for freelancing in the Kitchener/Waterloo/Guelph regions in Ontario.</p>
 					<ul>
 					<li>
 						<a href="./images/sample1_big.png" title="Sealmax ads"> 

@@ -24,7 +24,7 @@
 						<div class="article">
 						<ul>
 							<li class="image">
-								<a href=".">
+								<a href="images/<?php print $result->fields['bigImage']; ?>">
 									<img src='images/<?php print $result->fields['fileName']; ?>'
 											width="140" height="175"
 											alt="<?php print $result->fields['title']; ?>" />
