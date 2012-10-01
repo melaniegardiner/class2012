@@ -21,6 +21,15 @@
 							<input id="email"
 								type="text" name="email" />
 						</p>
+						
+						<p>
+							<label for="phone">Your phone number:</label>
+						</p>
+						<p>	
+							<input id="phone"
+								type="text" name="phone" />
+						</p>
+						
 						<p>
 							<label for="subject">Subject:</label>
 						</p>
