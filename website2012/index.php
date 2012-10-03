@@ -50,13 +50,13 @@ if($action == 'Send')
 {
 	// The message
 	$message = $_POST['message'];
-	$subject = $_POST['subject'];
+	$subject = $_POST['subject_'];
 
 	// In case any of our lines are larger than 70 characters, we should use wordwrap()
 	$message = wordwrap($message, 70);
 
 	$headers = 	"From: form@melaniegardiner.ca\r\n" .
-			'Reply-To: ' . $_POST['email'] . "\r\n" .
+			'Reply-To: ' . $_POST['email_'] . "\r\n" .
 			//read receipt
 	//"Disposition-Notification-To: " . $_POST['email'] . "\r\n" .
 	'X-Mailer: PHP/' . phpversion();
@@ -67,20 +67,27 @@ if($action == 'Send')
 	{
 		echo "mail sent";
 		$oEmail = new email();
-		$oEmail->email = $_POST['email'];
-		$oEmail->subject = $_POST['subject'];
+		$oEmail->email_ = $_POST['email_'];
+		$oEmail->subject_ = $_POST['subject_'];
 		$oEmail->message = $_POST['message'];
+		$oEmail->req_name = $_POST['req_name'];
+		$oEmail->phone_ = $_POST['phone_'];
+		
+		
 
-		$oEmail->save();
+		if (!$oEmail->save())
+		{
+			echo $oEmail->ErrorMsg();
+		}
 	}
 	else
 	{
 		echo "mail failed";
 	}//end else
-	
+
 	include 'views/form_thankyou.php';
-	
-	
+
+
 }//end if
 
 

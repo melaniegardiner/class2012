@@ -132,6 +132,24 @@ fieldset, blockquote {
 		font-weight: bold;
 	}
 	
+	#main fieldset textarea {
+	width: 300px;
+	resize: none;
+	}
+	
+		
+	/*class used for colouring the text field elements after checks are made for any user-entered content, or RegEx content*/
+	#main .error {
+			border-color: #F00;
+			background-color: #A9DBF6;
+			color: #F00;
+	}	
+	
+	#main .sm {
+		color: #CB4F29;
+		font-size: 90%;
+	}	
+	
 	/*FOOTER*/
 	/*clear left after floated neighbour; assign width/height; add spacing; rule line*/
 	#footer {

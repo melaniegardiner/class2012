@@ -3,18 +3,17 @@
 	File:			contact.js
 	Author:			Melanie Gardiner
 	Created On:		2012-03-01
-	Revised On:		2012-03-21
+	Revised On:		2012-10-3
 	Language: 		JavaScript
 	
 	Purpose:
 		
 	
 	Related Files:
-		index.html
+		index.php
 		jquery.lightbox-0.5.js
 		jquery.js
 		contact.css
-		contact.html
 */
 
 //on window load, call init
@@ -31,6 +30,8 @@ function init() {
 	$("req_name").onblur = validateField;
 	$("email_").onblur = validateField;
 	$("phone_").onblur = validateField;
+	$("subject_").onblur = validateField;
+
 	
 	//print all input elements in an array; assign onblur events to elements with Input
 	var inputs = document.getElementsByTagName("input");
@@ -69,7 +70,7 @@ function validateField() {
 	var code = id.substring(0, id.indexOf("_"));
 	console.log(code);
 	
-	if (code == "req") {
+	if (code == "req" || code == "subject") {
 		valid = (this.value.length > 0);
 	} // End if
 	else if (code == "email") {
