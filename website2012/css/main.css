@@ -51,6 +51,10 @@ fieldset, blockquote {
 		text-indent: -9999px;
 	}
 	
+	#logo {
+		margin-left: 30px;
+	}
+	
 		/*align navbar ul; move to right side; push down from top; e*/
 		#header #navbar ul {
 			margin-left: 630px;
@@ -98,26 +102,24 @@ fieldset, blockquote {
 			display: block;
 			float: left;
 			padding: 10px 10px 10px 0;
-			width: 300px;
-			height: 180px;
 		}
 	
 		/*p is a block element; clear left; add padding; assign width*/
 		#main p {
 			clear: left;
 			padding-bottom: 15px;
-			width: 670px;
 			font-size: 120%;
 		}
 			
 		.article {
 			float: left;
-			margin: 0 20px 10px 0;
+			margin: 0 18px 10px 0;
 			width: 140px;
 		}
 		
 		#catalogue p {
 			font-size: 70%;
+			padding-bottom: 5px;
 		}
 		
 	/*FORM*/
