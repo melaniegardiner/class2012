@@ -2,15 +2,18 @@
 	Author:	Melanie Gardiner
 	Created on:	2012-03-04
 	Revised on:	2012-10/1
-	CSS Version: 2.1
+	CSS Version: 3
 	
 	Purpose: To stylize portfolio website
 	
 	Related Files:
-	index.html
-	jquery.lightbox-0.5.js
-	jquery.js
-	contact.js
+	contact.php
+	footer.php
+	form_thankyou.php
+	head.php
+	list.php
+	store.php
+	index.php
 */
 
 /* Clear default styling from block level elements */
@@ -88,7 +91,7 @@ fieldset, blockquote {
 	}
 	
 		/*style h2; put space on bottom*/
-		#main h2 {
+		#main h2, #thankyou h2 {
 			font-size: 150%;
 			padding-bottom: 15px;
 		}
@@ -105,7 +108,7 @@ fieldset, blockquote {
 		}
 	
 		/*p is a block element; clear left; add padding; assign width*/
-		#main p {
+		#main p, #thankyou p {
 			clear: left;
 			padding-bottom: 15px;
 			font-size: 120%;
@@ -184,8 +187,18 @@ fieldset, blockquote {
 			margin-left: 10px;
 		}
 		
-	
-	
+	/*THANK YOU*/
+	/*style link/visited*/
+		#thankyou a:link, #thankyou a:visited {
+			text-decoration: none;
+			color: #A2A2A2;
+		}	
+		
+		/*colour hover/focus*/
+		#thankyou a:hover, #thankyou a:focus {
+			color: #000;
+		}
+
 	/*remove stroke for other browser*/
 		
 	.image {

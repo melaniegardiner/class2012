@@ -16,12 +16,12 @@
 		contact.css
 */
 
-//on window load, call init
-window.onload = init;
-
 var $ = function (id) {
 	return document.getElementById(id);
 } //End $
+
+//on window load, call init
+window.onload = init();
 
 function init() {
 // Form validation events------------------
